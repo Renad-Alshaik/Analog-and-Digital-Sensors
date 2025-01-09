@@ -39,3 +39,41 @@ If the sensor sends a HIGH signal (motion detected), the Arduino turns the LED O
 If the output is LOW (no motion), the LED remains OFF.
 
 Note: The Arduino code and design image have been uploaded along with the operation video
+
+# 2- Temperature Monitoring Probe (Analog Sensor):
+The output of TMP36 is a voltage proportional to the surrounding temperature. It is commonly used in temperature monitoring systems due to its high accuracy and ease of use.
+
+Applications of TMP sensor:
+* Home automation systems for temperature control
+* Weather stations
+* Industrial temperature monitoring
+* Medical devices
+
+Components in the Circuit:
+* Arduino UNO – Acts as the brain of the circuit, reading the temperature data from the TMP36 sensor and displaying it on the LCD screen.
+* TMP36 Temperature Sensor - Measures the surrounding temperature and outputs a voltage corresponding to the temperature.
+* 16x2 I2C LCD Display - Displays the temperature readings and any messages from the Arduino.
+* Jumper Wires - Connect all the components to the Arduino board.
+* USB Cable (Type A to B) - Provides power to the Arduino and to upload code from the computer to the Arduino.
+  
+Connection:
+* TMP36 Sensor:
+The VCC pin of the TMP36 is connected to the 5V pin on the Arduino.
+The GND pin of the TMP36 is connected to the GND pin on the Arduino.
+The VOUT pin of the TMP36 is connected to A0 on the Arduino to send the analog temperature data.
+* I2C LCD Display:
+The VCC pin of the LCD is connected to the 5V pin on the Arduino.
+The GND pin of the LCD is connected to the GND pin on the Arduino.
+The SDA pin of the LCD is connected to the A4 pin on the Arduino.
+The SCL pin of the LCD is connected to the A5 pin on the Arduino.
+
+How the Circuit Works:
+The Arduino powers the TMP36 sensor and the LCD display.
+The TMP36 sensor measures the temperature and outputs a corresponding analog voltage to pin A0 on the Arduino.
+The Arduino reads this voltage and calculates the temperature using a formula.
+The I2C LCD display shows:
+A message: "Temp Monitr System"
+The current temperature value in Celsius.
+
+Note: The Arduino code and design image have been uploaded along with the operation video
+
